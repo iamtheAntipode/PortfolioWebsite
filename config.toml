@@ -7,7 +7,7 @@ paginate        = 6
 
 [params]
   title       = "Example Site"
-  subtitle    = "My Site"
+  subtitle    = ""
 
   cover       = "uploads/header.jpg"
   description = "My example site."
@@ -21,8 +21,8 @@ paginate        = 6
   githubName = "iamtheantipode"
 
   logo = ""
-  orgName = "EM"
-  orgWebsite = "https://www.telematika.org"
+  orgName = "The Antipode"
+  orgWebsite = ""
   orgDescription = "Here is a description placeholder for your org"
 
   author = "The Antipode"
@@ -40,21 +40,21 @@ paginate        = 6
   post = "/:slug/"
 
 [[menu.main]]
-  name = "Main"
+  name = "Home"
   url = "/"
   weight = 200
 
 [[menu.main]]
-  name = "Project"
-  url = "/tags/project/"
+  name = "Coding"
+  url = "/coding"
   weight = 100
 
 [[menu.main]]
-  name = "My Life"
-  url = "/categories/life/"
+  name = "Design"
+  url = "/design"
   weight = 99
 
 [[menu.main]]
-  name = "Google "
-  url = "https://google.com/"
-  weight = 95
+  name = "Life"
+  url = "/life"
+  weight = 98
