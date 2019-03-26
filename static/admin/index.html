@@ -4,9 +4,34 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Content Manager</title>
+
+  <!-- sjwNote: C.Stayte also includes the following 2 lines, which are not    -->
+  <!--          mentioned in the documantation as of 3/2019:                   -->
+  <!-- Include the styles for the Netlify CMS UI, after your own styles -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/netlify-cms@^2.0.0/dist/cms.css" />  -->
+  
+  <!-- sjwNote: Added per Netlify CMS Authentication docs ("Add to Your Site") -->
+  <!-- sjwNote: Note: The instructions state that this line should also be     -->
+  <!--          added to the <head> of your site's main index page???          --> 
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  
 </head>
 <body>
   <!-- Include the script that builds the page and powers Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  
+  <!-- sjwNote: Added per Netlify CMS Authentication docs ("Add to Your Site") -->
+  <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+  </script>
+  
 </body>
 </html>
